@@ -3,7 +3,7 @@
 
 @font-face {
 	font-family: "Rounded Mgen";
-	src: url("Rounded-X-Mgen+Modern_Cohesive_Medium.ttf");
+	src: url("./Rounded-X-Mgen+Modern_Cohesive_Medium.ttf");
 }
 
 html, body {
@@ -16,9 +16,11 @@ div.title-card {
 	background-color: black;
 	position: fixed;
 	top: 0;
+	left: 0;
 	width: 100%;
 }
 img.home {
+	margin-left: .8rem;
 	width: 4rem;
 	padding: 0.1rem;
 	border-radius: 50%;
@@ -51,6 +53,7 @@ img.home {
 	margin-left: 1rem;
 	margin-right: 1rem;
 	color: darkgray;
+	text-decoration: none;
 	background-color: black;
 	padding: 1rem;
 	border-radius: 0.5rem
