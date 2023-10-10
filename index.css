@@ -1,9 +1,63 @@
 @charset "utf-8";
 /* CSS Document */
 
+@font-face {
+	font-family: "Rounded Mgen";
+	src: url("Rounded-X-Mgen+Modern_Cohesive_Medium.ttf");
+}
+
+html, body {
+	height: 100%;
+	background-color: #292929;
+}
+
 div.title-card {
-	vertical-align: top;
-	width: auto;
-	height: 6.25%;
+	overflow: hidden;
 	background-color: black;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+img.home {
+	width: 4rem;
+	padding: 0.1rem;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.title-grid {
+	display: grid;
+	grid-auto-flow: column;
+	color: white;
+	font-size: 1.8em;
+	align-items: center;
+	font-family: "Rounded Mgen";
+	float: left;
+}
+
+.title-padding {
+	grid-gap: 5px;
+	background-color: #1B1B1B;
+	width: 0.5rem;
+	height: 4rem;
+	border-radius: 100rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+.title-site {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	color: darkgray;
+	background-color: black;
+	padding: 1rem;
+	border-radius: 0.5rem
+}
+
+.title-site:hover {
+	background: #250000;
+	color: white;
+	cursor: pointer;
 }
