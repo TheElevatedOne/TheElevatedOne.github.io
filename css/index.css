@@ -3,7 +3,7 @@
 
 @font-face {
 	font-family: "Rounded Mgen";
-	src: url("/Rounded-X-Mgen+Modern_Cohesive_Medium.ttf");
+	src: url("../fonts/Rounded-X-Mgen+Modern_Cohesive_Medium.ttf");
 }
 
 html, body {
@@ -15,19 +15,22 @@ html, body {
 
 div.title-card {
 	overflow: hidden;
+	position: absolute;
 	background-color: black;
-	position: fixed;
-	top: 0;
+	top: 0%;
 	left: 0;
 	width: 100%;
+	max-height: 10rem;
 	z-index: 100;
+	align-self: auto;
 }
 img.home {
-	margin-left: .8rem;
+	margin-left: 0.8rem;
 	width: 4rem;
 	padding: 0.1rem;
 	border-radius: 50%;
 	cursor: pointer;
+	vertical-align: middle;
 }
 
 .title-grid {
@@ -38,6 +41,7 @@ img.home {
 	align-items: center;
 	font-family: "Rounded Mgen";
 	float: left;
+	vertical-align: middle;
 }
 
 .title-padding {
@@ -69,14 +73,29 @@ img.home {
 }
 
 div.text-body {
-	position: fixed;
+	position: absolute;
 	overflow: scroll;
-	display: block;
+	overflow-x: hidden;
 	background-color: #464646;
-	width: 90%;
-	height: 90%;
-	top: 6.5rem;
+	width: 95%;
+	left: 2.5%;
+	top: 5.5rem;
 	bottom: 1rem;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
+	height: calc(100% - 10.5rem);
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+div.footer {
+	position: absolute;
+	vertical-align: bottom;
+	height: 3rem;
+	min-height: 3rem;
+	top: 100%;
+	transform: translateY(-100%);
+	left: 0;
+	width: 100%;
+	background-color: black;
+	text-align: center
 }
