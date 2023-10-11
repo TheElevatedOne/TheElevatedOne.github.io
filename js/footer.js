@@ -11,3 +11,9 @@ function datetime() {
 	console.log(text);
 }
 window.onload = datetime;
+
+function yee() {
+	var text = document.getElementById("yee").innerHTML;
+	console.log(text)
+	document.getElementById("yee").innerHTML = text + "e";
+}
