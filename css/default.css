@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "RoundedMgenPlus2ppMedium";
+    src: url('../fonts/rounded-mgenplus-2pp-medium-custom.ttf');
+}
+
+body {
+    background-image: url('../wallpapers/orion.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.top-bar {
+    width: 99.5%;
+    height: 3%;
+    max-height: 10%;
+    padding-top: 0.1%;
+    background: rgba(21,26,34,150);
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.clock {
+    color: white;
+    font-family: "RoundedMgenPlus2ppMedium";
+    display: table;
+    margin: 0 auto;
+    width: max-content;
+    font-size: 110%;
+}
+
+.bottom-bar {
+    height: 4.26%;
+    background: rgba(21,26,34,150);
+    width: fit-content;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 95.74%;
+    color: white;
+}
+
+.appman {
+    width: 5%;
+}
