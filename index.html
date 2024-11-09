@@ -20,9 +20,9 @@
         function reportWindowSize() {
             windowHeight = window.innerHeight;
             windowWidth = window.innerWidth;
-            if (windowWidth < 800 || windowHeight < 600) {
+            if (windowHeight/windowWidth>=0.75) {
                 document.getElementById("wrong-size").style.display = "flex";
-                document.getElementById("wrong-size-text").innerHTML = `Window Size is less than 650w or 480h\n` + `Window Size: ${windowWidth}x${windowHeight}`;
+                document.getElementById("wrong-size-text").innerHTML = `Window Height/Window Width >= 0.75, It break when this happens.\n` + `Window Ratio: ${(windowHeight/windowWidth).toFixed(4)}`;
             } else {
                 document.getElementById("wrong-size").style.display = "none";
             }
