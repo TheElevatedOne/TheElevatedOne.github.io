@@ -1,30 +1,76 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>ELEVATED | Desktop</title>
-<link rel="stylesheet" href="./css/default.css">
-<script src="./js/moment.js"></script>
-<script>
-function updateClock() {
-    var clock = document.getElementById("clock");
-    var date = new Date();
-    var fmt_date = moment(date).format("DD/MM/YYYY | hh:mm:ss A");
-    clock.innerHTML = fmt_date;
-}
-</script>
-</head>
-<body onload="updateClock(); setInterval('updateClock()', 1000 )">
-<div class="top-bar">
-<span class="clock" id="clock"></span>
-</div>
-<div class="bottom-bar">
-<table>
-<tr>
-<td class="appman">yee</td>
-<td class="appman">yee</td>
-</tr>
-</table>
-</div>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>ELEVATED | Desktop</title>
+        <link rel="stylesheet" href="./css/default.css">
+        <script src="./js/moment.js"></script>
+        <script>
+        function updateClock() {
+            var clock = document.getElementById("clock");
+            var date = new Date();
+            var fmt_date = moment(date).format("DD/MM/YYYY | hh:mm:ss A");
+            clock.innerHTML = fmt_date;
+        }
+        </script>
+        <script>
+        var windowHeight = window.innerHeight;
+        var windowWidth = window.innerWidth;
+
+        function reportWindowSize() {
+            windowHeight = window.innerHeight;
+            windowWidth = window.innerWidth;
+            if (windowWidth < 800 || windowHeight < 600) {
+                document.getElementById("wrong-size").style.display = "flex";
+                document.getElementById("wrong-size-text").innerHTML = `Window Size is less than 650w or 480h\n` + `Window Size: ${windowWidth}x${windowHeight}`;
+            } else {
+                document.getElementById("wrong-size").style.display = "none";
+            }
+        }
+
+        window.addEventListener("resize", reportWindowSize);
+        </script>
+    </head>
+    <body onload="updateClock(); setInterval('updateClock()', 1000 )">
+        <div class="wrong-size" id="wrong-size">
+            <span id="wrong-size-text">
+            </span>
+        </div>
+        <div class="top-bar">
+            <span class="clock" id="clock"></span>
+        </div>
+        <div class="widget">
+            <div class="grid-container">
+                <div class="header">
+                    <span>Adam Mlady</span>
+                    <br>
+                    <span>ELEVATED</span>
+                </div>
+                <div>
+                    <img src="./logo/logo.png" class="logo">
+                </div>
+                <div class="footer">Footer</div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div>
+                <img src="./icons/userinfo.svg" alt="Info">
+            </div>
+            <div>
+                <img src="./icons/github.svg" alt="Github">
+            </div>
+            <div>
+                <img src="./icons/gnome-paint.svg" alt="Art">
+            </div>
+            <div>
+                <img src="./icons/playmymusic.svg" alt="Music">
+            </div>
+            <div>
+                <img src="./icons/minecraft.svg" alt="Minecraft Stuff">
+            </div>
+            <div>
+                <img src="./icons/accessories-image-viewer.svg" alt="Wallpapers">
+            </div>
+        </div>
+    </body>
 </html>
