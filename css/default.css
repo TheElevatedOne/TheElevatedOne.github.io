@@ -1,5 +1,5 @@
 :root {
-    --bgc: rgba(21,26,34,150);
+    --bgc: rgba(21,26,34,0.95);
 }
 
 @font-face {
@@ -35,8 +35,8 @@ body {
 }
 
 .top-bar {
-    width: 99%;
-    height: 3%;
+    width: 99vw;
+    height: 3vh;
     padding-top: 0.1%;
     padding-bottom: 0.1%;
     background: var(--bgc);
@@ -59,25 +59,23 @@ body {
 }
 
 .bottom-bar {
-    height: 4.26%;
+    height: 4.2vh;
     background: var(--bgc);
     width: min-content;
     margin-inline: auto;
     left: 0;
     right: 0;
     position: absolute;
-    top: 95.35%;
+    top: 95.4vh;
     color: white;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
+    align-content: center;
     justify-content: center;
     padding-top: 0.1%;
     padding-bottom: 0.1%;
-    padding-left: 1%;
-
     /*
     info
     github
@@ -87,29 +85,32 @@ body {
     */
     & > div {
         width: 3vw;
+        height: 4vh;
         display: flex;
-        align-items: center;
-        justify-items: center;
+        align-content: center;
+        justify-content: center;
         cursor: pointer;
+        transition: 0.3s;
         & > img {
-            width: 2vw;
+            width: 1.7vw;
             left: 0.5vw;
             right: 0.5vw;
         }
     }
+    & > div:hover {
+        background-color: #5b5c5f;
+        border-radius: 10px;
+    }
 }
 
-.appman {
-    width: 5%;
-}
 
 .widget {
-    width: 46%;
-    height: 46%;
+    width: 60vw;
+    height: 75vh;
     position: absolute;
     margin-inline: auto;
     padding: 3vh;
-    top: 23%;
+    top: 9.5vh;
     left: 0;
     right: 0;
     color: white;
@@ -118,21 +119,49 @@ body {
     border: 2px solid red;
 }
 
+.name {
+    font-family: Helvetica;
+    font-size: 6vh;
+}
+
+.desc {
+    font-family: Roboto;
+    font-size: 2.5vh;
+    padding-left: 1vh;
+}
+
 .grid-container {
     width: 100%;
-    height: 100%;
+    height: 97%;
     display: grid;
     grid-template-columns: 2fr min-content;
     grid-template-rows: min-content 1fr;
     grid-template-areas: 
     'header logo'
     'footer footer';
-    gap: 10px;
+    column-gap: 2vh;
+    row-gap: 4vh;
     & > div {
-        background-color: black; /*placeholder*/
         font-size: 30px;
         height: 100%;
     }
 }
-.logo { max-height: calc(35vh - 5vw);}
-.footer { grid-column: span 2;}
+.logo {
+    max-height: calc(35vh - 4vw);
+    padding-top: 2vh;
+}
+.header {
+    background-color: rgba(255, 255, 255, 0.01);
+    border-radius: 20px;
+    padding-top: 2vh;
+    padding-left: 2vh;
+
+}
+.footer {
+    grid-column: span 2;
+    background-color: rgba(255, 255, 255, 0.01);
+    border-radius: 20px;
+    padding-top: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
