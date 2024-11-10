@@ -61,6 +61,7 @@ body {
     margin: 0 auto;
     width: max-content;
     font-size: 2vh;
+    cursor: default;
 }
 
 .bottom-bar {
@@ -123,6 +124,7 @@ body {
     background: var(--bgc);
     border-radius: 30px;
     border: 2px solid red;
+    cursor: default;
 }
 
 .name {
