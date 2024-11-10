@@ -2,6 +2,7 @@ function closeWindow(x) {
     var c = x.id;
     var split = x.id.split("-")[1];
     document.getElementById("widget").style.display = "inline";
+    var csstext = "";
     document.getElementById(split).style.backgroundColor = "rgba(0, 0, 0, 0)";
     // let win = document.getElementsByClassName(c)[0];
     // win.style.display = "none";
@@ -11,6 +12,7 @@ function openWindow(x) {
     var c = x.id;
     var split = x.id.split("-")[1];
     document.getElementById("widget").style.display = "none";
+    var csstext = "";
     document.getElementById(split).style.backgroundColor = "rgba(91, 92, 95, 1)";
     // let win = document.getElementsByClassName(c)[0];
     // win.style.display = "block";
