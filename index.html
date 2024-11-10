@@ -6,6 +6,7 @@
         <title>ELEVATED | Desktop</title>
         <link rel="stylesheet" href="./css/default.css">
         <script src="./js/moment.js"></script>
+        <script src="./js/bottom-bar.js"></script>
         <script>
             /* Top Bar Clock */
             function updateClock() {
@@ -60,7 +61,7 @@
         <div class="top-bar">
             <span class="clock" id="clock"></span>
         </div>
-        <div class="widget">
+        <div class="widget" id="widget">
             <div class="grid-container">
                 <div class="header">
                     <span class="name"><strong>Adam Mladý</strong></span>
@@ -94,23 +95,33 @@
             </div>
         </div>
         <div class="bottom-bar">
-            <div title="Info" class="appman" id="info">
-                <img src="./icons/userinfo.svg" alt="Info">
+            <div title="Info" class="appman-info" id="info">
+                <input type="checkbox" name="info" id="ch-info" onclick="uncheck(this)">
+                <!-- <img src="./icons/userinfo.svg" alt="Info"> -->
             </div>
-            <div title="Github" class="appman" id="git">
-                <img src="./icons/github.svg" alt="Github">
+            <div title="Github" class="appman-git" id="git">
+                <input type="checkbox" name="info" id="ch-git" onclick="uncheck(this)">
+                <!-- <img src="./icons/github.svg" alt="Github"> -->
             </div>
-            <div title="Art" class="appman" id="art">
-                <img src="./icons/gnome-paint.svg" alt="Art">
+            <div title="Art" class="appman-art" id="art">
+                <input type="checkbox" name="info" id="ch-art" onclick="uncheck(this)">
+                <!-- <img src="./icons/gnome-paint.svg" alt="Art"> -->
             </div>
-            <div title="Music" class="appman" id="music">
-                <img src="./icons/playmymusic.svg" alt="Music">
+            <div title="Vape" class="appman-vape" id="vape">
+                <input type="checkbox" name="info" id="ch-vape" onclick="uncheck(this)">
+                <!-- <img src="./icons/gnome-paint.svg" alt="Art"> -->
             </div>
-            <div title="Minecraft Stuff" class="appman" id="mine">
-                <img src="./icons/minecraft.svg" alt="Minecraft Stuff">
+            <div title="Music" class="appman-music" id="music">
+                <input type="checkbox" name="info" id="ch-music" onclick="uncheck(this)">
+                <!-- <img src="./icons/playmymusic.svg" alt="Music"> -->
             </div>
-            <div title="Wallpapers" class="appman" id="wall">
-                <img src="./icons/accessories-image-viewer.svg" alt="Wallpapers">
+            <div title="Minecraft Stuff" class="appman-mine" id="mine">
+                <input type="checkbox" name="info" id="ch-mine" onclick="uncheck(this)">
+                <!-- <img src="./icons/minecraft.svg" alt="Minecraft Stuff"> -->
+            </div>
+            <div title="Wallpapers" class="appman-wall" id="wall">
+                <input type="checkbox" name="info" id="ch-wall" onclick="uncheck(this)">
+                <!-- <img src="./icons/accessories-image-viewer.svg" alt="Wallpapers"> -->
             </div>
         </div>
         <script>
