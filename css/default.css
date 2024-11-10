@@ -13,6 +13,8 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
+    height: 100%;
 }
 
 .wrong-size {
@@ -105,11 +107,12 @@ body {
 
 
 .widget {
+    display: inline;
     width: 60vw;
     height: 75vh;
     position: absolute;
     margin-inline: auto;
-    padding: 3vh;
+    padding: 15px;
     top: 9.5vh;
     left: 0;
     right: 0;
@@ -121,40 +124,49 @@ body {
 
 .name {
     font-family: Helvetica;
-    font-size: 6vh;
+    font-size: 4vw;
 }
 
 .desc {
     font-family: Roboto;
-    font-size: 2.5vh;
+    font-size: 1.2vi;
     padding-left: 1vh;
 }
 
 .grid-container {
     width: 100%;
     height: 100%;
+    max-height: 100%;
     display: grid;
-    grid-template-columns: 2fr min-content;
-    grid-template-rows: min-content 1fr;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     'header logo'
     'footer footer';
-    column-gap: 2vh;
-    row-gap: 4vh;
+    column-gap: 1vw;
+    row-gap: 2vh;
     & > div {
-        font-size: 30px;
         height: 100%;
     }
 }
+.logo-cont {
+    justify-content: center;
+    align-content: center;
+    display: inline-block;
+    position: relative;
+}
+
 .logo {
-    max-height: calc(35vh - 4vw);
-    padding-top: 5vh;
+    max-width: 85%;
+    max-height: 85%;
 }
 .header {
     background-color: rgba(255, 255, 255, 0.01);
     border-radius: 20px;
-    padding-top: 3vh;
     padding-left: 2vh;
+    padding-right: 2vh;
+    word-wrap: break-word;
+    max-height: min-content;
 
 }
 .footer {
@@ -163,4 +175,6 @@ body {
     border-radius: 22px;
     padding-left: 2vh;
     padding-right: 2vh;
+    word-wrap: break-word;
+    max-height: min-content;
 }

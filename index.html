@@ -20,9 +20,9 @@
         function reportWindowSize() {
             windowHeight = window.innerHeight;
             windowWidth = window.innerWidth;
-            if (windowHeight/windowWidth>=0.75) {
+            if (windowWidth/windowHeight>=2.45) {
                 document.getElementById("wrong-size").style.display = "flex";
-                document.getElementById("wrong-size-text").innerHTML = `Window Height/Window Width >= 0.75, It break when this happens.\n` + `Window Ratio: ${(windowHeight/windowWidth).toFixed(4)}`;
+                document.getElementById("wrong-size-text").innerHTML = "Screen too wide, content cannot be displayed."
             } else {
                 document.getElementById("wrong-size").style.display = "none";
             }
@@ -31,7 +31,7 @@
         window.addEventListener("resize", reportWindowSize);
         </script>
     </head>
-    <body onload="updateClock(); setInterval('updateClock()', 1000 )">
+    <body onload="reportWindowSize(); updateClock(); setInterval('updateClock()', 1000 )">
         <div class="wrong-size" id="wrong-size">
             <span id="wrong-size-text">
             </span>
@@ -42,9 +42,7 @@
         <div class="widget">
             <div class="grid-container">
                 <div class="header">
-                    <span class="name"><strong>Adam Mlady</strong></span>
-                    <br>
-                    <img src="./logo/elevated.png" alt="ELEVATED" style="position: absolute; height: 4vh; left: 5.5vh">
+                    <span class="name"><strong>Adam Mladý</strong></span>
                     <br>
                     <p class="desc">
                         A Programmer, Photograper, Audiophile and a General Nerd
@@ -53,8 +51,8 @@
                         This is a website showcasing all of my endeavours and many more things.
                     </p>
                 </div>
-                <div>
-                    <img src="./logo/logo.png" class="logo">
+                <div class="logo-cont">
+                    <img src="./logo/logo.png" class="logo" title="Current Logo">
                 </div>
                 <div class="footer">
                     <p class="desc">
@@ -73,22 +71,22 @@
             </div>
         </div>
         <div class="bottom-bar">
-            <div>
+            <div title="Info" class="appman" id="info">
                 <img src="./icons/userinfo.svg" alt="Info">
             </div>
-            <div>
+            <div title="Github" class="appman" id="git">
                 <img src="./icons/github.svg" alt="Github">
             </div>
-            <div>
+            <div title="Art" class="appman" id="art">
                 <img src="./icons/gnome-paint.svg" alt="Art">
             </div>
-            <div>
+            <div title="Music" class="appman" id="music">
                 <img src="./icons/playmymusic.svg" alt="Music">
             </div>
-            <div>
+            <div title="Minecraft Stuff" class="appman" id="mine">
                 <img src="./icons/minecraft.svg" alt="Minecraft Stuff">
             </div>
-            <div>
+            <div title="Wallpapers" class="appman" id="wall">
                 <img src="./icons/accessories-image-viewer.svg" alt="Wallpapers">
             </div>
         </div>
