@@ -48,9 +48,11 @@
                     window.open("https://m.elevated.ovh", "_self")
                 }
             }
+
+            redirect()
         </script>
     </head>
-    <body onload="redirect(); reportWindowSize(); updateClock(); setInterval('updateClock()', 1000 )">
+    <body onload="reportWindowSize(); updateClock(); setInterval('updateClock()', 1000 )">
         <div class="wrong-size" id="wrong-size">
             <span id="wrong-size-text">
             </span>
