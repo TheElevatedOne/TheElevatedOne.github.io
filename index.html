@@ -21,10 +21,12 @@
             windowHeight = window.innerHeight;
             windowWidth = window.innerWidth;
             if (windowWidth/windowHeight>=2.45) {
-                document.getElementById("wrong-size").style.display = "flex";
+                document.getElementById("wrong-size").style.visibility = "visible";
+                document.getElementById("wrong-size").style.opacity = "1";
                 document.getElementById("wrong-size-text").innerHTML = "Screen too wide, content cannot be displayed."
             } else {
-                document.getElementById("wrong-size").style.display = "none";
+                document.getElementById("wrong-size").style.visibility = "hidden";
+                document.getElementById("wrong-size").style.opacity = "0";
             }
         }
 
