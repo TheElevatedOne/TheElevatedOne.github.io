@@ -124,13 +124,17 @@ body {
 
 .name {
     font-family: Helvetica;
-    font-size: 4vw;
+    font-size: 3vi;
+}
+
+.elevated {
+    width: 10vi;
+    padding-left: 0.1vi;
 }
 
 .desc {
     font-family: Roboto;
     font-size: 1.2vi;
-    padding-left: 1vh;
 }
 
 .grid-container {
