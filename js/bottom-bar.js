@@ -17,7 +17,7 @@ function openWindow(x) {
     document.getElementById(split).style.backgroundColor = "rgba(91, 92, 95, 1)";
     var win = `win-${split}`
     console.log(win)
-    document.getElementById(win).style.display = "block";
+    document.getElementById(win).style.display = "flex";
 }
 
 function uncheck(x) {

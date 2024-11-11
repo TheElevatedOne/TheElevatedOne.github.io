@@ -569,6 +569,7 @@ body {
 .win-vape {
     display: none;
     position: relative;
+    flex-direction: column;
     border: 2px solid red;
     border-radius: 10px;
     box-sizing: border-box;
@@ -666,10 +667,12 @@ body {
 }
 
 .vapesite {
-    width: 98.2vw;
-    height: 80vh;
+    width: 98.6vw;
+    height: 90vh;
+    display: block;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    z-index: 10;
 }
 
 .win-music {
