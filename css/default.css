@@ -7,6 +7,11 @@
     src: url('../fonts/rounded-mgenplus-2pp-medium-custom.ttf');
 }
 
+@font-face {
+    font-family: "NotoSans";
+    src: url("../fonts/NotoSans-VariableFont.ttf");
+}
+
 body {
     background-image: url('../wallpapers/orion.jpg');
     background-repeat: no-repeat;
@@ -219,6 +224,7 @@ body {
         height: 100%;
     }
 }
+
 .logo-cont {
     justify-content: center;
     align-content: center;
@@ -230,6 +236,7 @@ body {
     max-width: 85%;
     max-height: 85%;
 }
+
 .header {
     background-color: rgba(255, 255, 255, 0.01);
     border-radius: 20px;
@@ -239,6 +246,7 @@ body {
     max-height: min-content;
 
 }
+
 .footer {
     grid-column: span 2;
     background-color: rgba(255, 255, 255, 0.01);
@@ -247,4 +255,707 @@ body {
     padding-right: 2vh;
     word-wrap: break-word;
     max-height: min-content;
+}
+
+.window {
+    z-index: 10;
+    display: block;
+    position: absolute;
+    top: 3vh;
+    left: 0;
+    width: 100vw;
+    height: 92.8vh;
+}
+
+.win-info {
+    display: none;
+    position: relative;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: var(--bgc);
+    top: 1.5%;
+    left: 0.5%;
+    width: 99%;
+    height: 97.5%;
+    & > div.title-bar {
+        width: 100%;
+        height: 2vh;
+        background-color: rgb(0, 0, 0);
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        cursor: default;
+        & > div.span {
+            color: white;
+            display: block;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 80%;
+            font-size: 1.4vh;
+            font-family: "NotoSans";
+            top: 50%;
+            transform: translateY(-62.5%);
+        }
+        & > div.img {
+            width: 1.5%;
+            height: 2.6%;
+            display: block;
+            position: absolute;
+            background: url("../icons/userinfo.svg") no-repeat;
+            background-size: 1.4vh;
+            background-position: center;
+        }
+        & > div.radio {
+            display: grid;
+            position: absolute;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            left: calc(99vw - 8vh);
+            top: 0.3vh;
+            height: 2.6%;
+            width: fit-content;
+            & > div {
+                margin-right: 1vh;
+            }
+            & > div.min {
+                background: url("../icons/minimize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max {
+                background: url("../icons/maximize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit {
+                background: url("../icons/close.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.min:hover {
+                background: url("../icons/minimize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max:hover {
+                background: url("../icons/maximize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit:hover {
+                background: url("../icons/close-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+        }
+    }
+}
+
+.win-git {
+    display: none;
+    position: relative;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: var(--bgc);
+    top: 1.5%;
+    left: 0.5%;
+    width: 99%;
+    height: 97.5%;
+    & > div.title-bar {
+        width: 100%;
+        height: 2vh;
+        background-color: rgb(0, 0, 0);
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        cursor: default;
+        & > div.span {
+            color: white;
+            display: block;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 80%;
+            font-size: 1.4vh;
+            font-family: "NotoSans";
+            top: 50%;
+            transform: translateY(-62.5%);
+        }
+        & > div.img {
+            width: 1.5%;
+            height: 2.6%;
+            display: block;
+            position: absolute;
+            background: url("../icons/github.svg") no-repeat;
+            background-size: 1.4vh;
+            background-position: center;
+        }
+        & > div.radio {
+            display: grid;
+            position: absolute;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            left: calc(99vw - 8vh);
+            top: 0.3vh;
+            height: 2.6%;
+            width: fit-content;
+            & > div {
+                margin-right: 1vh;
+            }
+            & > div.min {
+                background: url("../icons/minimize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max {
+                background: url("../icons/maximize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit {
+                background: url("../icons/close.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.min:hover {
+                background: url("../icons/minimize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max:hover {
+                background: url("../icons/maximize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit:hover {
+                background: url("../icons/close-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+        }
+    }
+}
+
+.win-art {
+    display: none;
+    position: relative;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: var(--bgc);
+    top: 1.5%;
+    left: 0.5%;
+    width: 99%;
+    height: 97.5%;
+    & > div.title-bar {
+        width: 100%;
+        height: 2vh;
+        background-color: rgb(0, 0, 0);
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        cursor: default;
+        & > div.span {
+            color: white;
+            display: block;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 80%;
+            font-size: 1.4vh;
+            font-family: "NotoSans";
+            top: 50%;
+            transform: translateY(-62.5%);
+        }
+        & > div.img {
+            width: 1.5%;
+            height: 2.6%;
+            display: block;
+            position: absolute;
+            background: url("../icons/gnome-paint.svg") no-repeat;
+            background-size: 1.4vh;
+            background-position: center;
+        }
+        & > div.radio {
+            display: grid;
+            position: absolute;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            left: calc(99vw - 8vh);
+            top: 0.3vh;
+            height: 2.6%;
+            width: fit-content;
+            & > div {
+                margin-right: 1vh;
+            }
+            & > div.min {
+                background: url("../icons/minimize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max {
+                background: url("../icons/maximize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit {
+                background: url("../icons/close.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.min:hover {
+                background: url("../icons/minimize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max:hover {
+                background: url("../icons/maximize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit:hover {
+                background: url("../icons/close-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+        }
+    }
+}
+
+.win-vape {
+    display: none;
+    position: relative;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: var(--bgc);
+    top: 1.5%;
+    left: 0.5%;
+    width: 99%;
+    height: 97.5%;
+    & > div.title-bar {
+        width: 100%;
+        height: 2vh;
+        background-color: rgb(0, 0, 0);
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        cursor: default;
+        & > div.span {
+            color: white;
+            display: block;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 80%;
+            font-size: 1.4vh;
+            font-family: "NotoSans";
+            top: 50%;
+            transform: translateY(-62.5%);
+        }
+        & > div.img {
+            width: 1.5%;
+            height: 2.6%;
+            display: block;
+            position: absolute;
+            background: url("../icons/vaprio.svg") no-repeat;
+            background-size: 1.4vh;
+            background-position: center;
+        }
+        & > div.radio {
+            display: grid;
+            position: absolute;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            left: calc(99vw - 8vh);
+            top: 0.3vh;
+            height: 2.6%;
+            width: fit-content;
+            & > div {
+                margin-right: 1vh;
+            }
+            & > div.min {
+                background: url("../icons/minimize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max {
+                background: url("../icons/maximize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit {
+                background: url("../icons/close.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.min:hover {
+                background: url("../icons/minimize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max:hover {
+                background: url("../icons/maximize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit:hover {
+                background: url("../icons/close-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+        }
+    }
+}
+
+.win-music {
+    display: none;
+    position: relative;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: var(--bgc);
+    top: 1.5%;
+    left: 0.5%;
+    width: 99%;
+    height: 97.5%;
+    & > div.title-bar {
+        width: 100%;
+        height: 2vh;
+        background-color: rgb(0, 0, 0);
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        cursor: default;
+        & > div.span {
+            color: white;
+            display: block;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 80%;
+            font-size: 1.4vh;
+            font-family: "NotoSans";
+            top: 50%;
+            transform: translateY(-62.5%);
+        }
+        & > div.img {
+            width: 1.5%;
+            height: 2.6%;
+            display: block;
+            position: absolute;
+            background: url("../icons/playmymusic.svg") no-repeat;
+            background-size: 1.4vh;
+            background-position: center;
+        }
+        & > div.radio {
+            display: grid;
+            position: absolute;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            left: calc(99vw - 8vh);
+            top: 0.3vh;
+            height: 2.6%;
+            width: fit-content;
+            & > div {
+                margin-right: 1vh;
+            }
+            & > div.min {
+                background: url("../icons/minimize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max {
+                background: url("../icons/maximize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit {
+                background: url("../icons/close.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.min:hover {
+                background: url("../icons/minimize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max:hover {
+                background: url("../icons/maximize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit:hover {
+                background: url("../icons/close-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+        }
+    }
+}
+
+.win-mine {
+    display: none;
+    position: relative;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: var(--bgc);
+    top: 1.5%;
+    left: 0.5%;
+    width: 99%;
+    height: 97.5%;
+    & > div.title-bar {
+        width: 100%;
+        height: 2vh;
+        background-color: rgb(0, 0, 0);
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        cursor: default;
+        & > div.span {
+            color: white;
+            display: block;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 80%;
+            font-size: 1.4vh;
+            font-family: "NotoSans";
+            top: 50%;
+            transform: translateY(-62.5%);
+        }
+        & > div.img {
+            width: 1.5%;
+            height: 2.6%;
+            display: block;
+            position: absolute;
+            background: url("../icons/minecraft.svg") no-repeat;
+            background-size: 1.4vh;
+            background-position: center;
+        }
+        & > div.radio {
+            display: grid;
+            position: absolute;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            left: calc(99vw - 8vh);
+            top: 0.3vh;
+            height: 2.6%;
+            width: fit-content;
+            & > div {
+                margin-right: 1vh;
+            }
+            & > div.min {
+                background: url("../icons/minimize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max {
+                background: url("../icons/maximize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit {
+                background: url("../icons/close.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.min:hover {
+                background: url("../icons/minimize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max:hover {
+                background: url("../icons/maximize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit:hover {
+                background: url("../icons/close-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+        }
+    }
+}
+
+.win-wall {
+    display: none;
+    position: relative;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: var(--bgc);
+    top: 1.5%;
+    left: 0.5%;
+    width: 99%;
+    height: 97.5%;
+    & > div.title-bar {
+        width: 100%;
+        height: 2vh;
+        background-color: rgb(0, 0, 0);
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        cursor: default;
+        & > div.span {
+            color: white;
+            display: block;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 80%;
+            font-size: 1.4vh;
+            font-family: "NotoSans";
+            top: 50%;
+            transform: translateY(-62.5%);
+        }
+        & > div.img {
+            width: 1.5%;
+            height: 2.6%;
+            display: block;
+            position: absolute;
+            background: url("../icons/accessories-image-viewer.svg") no-repeat;
+            background-size: 1.4vh;
+            background-position: center;
+        }
+        & > div.radio {
+            display: grid;
+            position: absolute;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            left: calc(99vw - 8vh);
+            top: 0.3vh;
+            height: 2.6%;
+            width: fit-content;
+            & > div {
+                margin-right: 1vh;
+            }
+            & > div.min {
+                background: url("../icons/minimize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max {
+                background: url("../icons/maximize.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit {
+                background: url("../icons/close.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.min:hover {
+                background: url("../icons/minimize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.max:hover {
+                background: url("../icons/maximize-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+            & > div.exit:hover {
+                background: url("../icons/close-hover.svg") no-repeat;
+                background-size: 1.4vh;
+                background-position: center;
+                width: 1.4vh;
+                height: 1.4vh;
+            }
+        }
+    }
 }
