@@ -567,7 +567,7 @@ body {
 }
 
 .win-vape {
-    display: none;
+    display: flex;
     position: relative;
     flex-direction: column;
     border: 2px solid red;
@@ -733,7 +733,7 @@ body {
 }
 
 .vapesite {
-    width: 98.6vw;
+    width: 100%;
     height: 90vh;
     display: block;
     border-bottom-left-radius: 8px;
