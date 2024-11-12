@@ -567,7 +567,7 @@ body {
 }
 
 .win-vape {
-    display: flex;
+    display: none;
     position: relative;
     flex-direction: column;
     border: 2px solid red;
