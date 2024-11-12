@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="darkreader-lock">
         <title>ELEVATED | Desktop</title>
         <link rel="shortcut icon" href="./logo/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="./css/default.css">
@@ -152,8 +153,19 @@
                         <div class="exit" id="x-vape" onclick="closeWindow(this)"></div>
                     </div>
                 </div>
-                <div class="url" id="url">vape.elevated.ovh</div>
-                <iframe class="vapesite" src="https://vape.elevated.ovh" frameborder="0" scrolling="yes" allow="true" loading="lazy"></iframe>
+                <div class="url-bar" id="url">
+                    <div class="reload" onclick="reloadIframe()"></div>
+                    <script>
+                        function reloadIframe() {
+                            document.getElementById('vapesite').src += '';
+                        }
+                    </script>
+                    <div class="ssl" title="This website is secured by SSL"></div>
+                    <div class="url">
+                        <span class="hidden">https://vape.</span><span class="visible">elevated.ovh</span>
+                    </div>
+                </div>
+                <iframe class="vapesite" id="vapesite" src="https://vape.elevated.ovh" frameborder="0" scrolling="yes" allow="true" loading="lazy"></iframe>
             </div>
             <div class="win-music" id="win-music">
                 <div class="title-bar" id="title-bar">
