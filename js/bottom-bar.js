@@ -4,8 +4,7 @@ function closeWindow(x) {
     document.getElementById("widget").style.display = "inline";
     var csstext = "";
     document.getElementById(split).style.backgroundColor = "rgba(0, 0, 0, 0)";
-    var win = `win-${split}`
-    console.log(win)
+    var win = `win-${split}`;
     document.getElementById(win).style.display = "none";
 }
 
@@ -15,8 +14,7 @@ function openWindow(x) {
     document.getElementById("widget").style.display = "none";
     var csstext = "";
     document.getElementById(split).style.backgroundColor = "rgba(91, 92, 95, 1)";
-    var win = `win-${split}`
-    console.log(win)
+    var win = `win-${split}`;
     document.getElementById(win).style.display = "flex";
 }
 
