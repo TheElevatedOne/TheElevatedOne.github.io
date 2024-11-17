@@ -2,6 +2,7 @@
 ---
 ## Current websites
 - https://www.elevated.ovh - Main website | WIP
+- https://tree.elevated.ovh - Linktree | Finished
 - https://vape.elevated.ovh - Vape Mixing website | Finished(?)
 - https://mc.elevated.ovh - Minecraft server website | WIP
 - https://m.elevated.ovh - Mobile website | WIP
