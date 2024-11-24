@@ -24,28 +24,6 @@
             }
         </script>
         <script>
-            /* Widescreen not supported really due to the design, Shame */
-            var windowHeight = window.innerHeight;
-            var windowWidth = window.innerWidth;
-
-            function reportWindowSize() {
-                windowHeight = window.innerHeight;
-                windowWidth = window.innerWidth;
-                if (windowWidth/windowHeight>=2.45) {
-                    document.getElementById("wrong-size").style.visibility = "visible";
-                    document.getElementById("wrong-size").style.opacity = "1";
-                    document.getElementById("wrong-size").style.display = "flex";
-                    document.getElementById("wrong-size-text").innerHTML = "Screen too wide, content cannot be displayed."
-                } else {
-                    document.getElementById("wrong-size").style.visibility = "hidden";
-                    document.getElementById("wrong-size").style.opacity = "0";
-                    document.getElementById("wrong-size").style.opacity = "none";
-                }
-            }
-
-           window.addEventListener("resize", reportWindowSize);
-        </script>
-        <script>
             /* This is a Desktop Website, it does not work on Mobile really. So I'm making a separate one, someday */
             window.mobileCheck = function() {
                 let check = false;
@@ -62,7 +40,7 @@
             redirect()
         </script>
     </head>
-    <body onload="reportWindowSize(); updateClock(); setInterval('updateClock()', 1000 )">
+    <body onload="updateClock(); setInterval('updateClock()', 1000 )">
         <div class="wrong-size" id="wrong-size">
             <span id="wrong-size-text">
             </span>
@@ -73,9 +51,11 @@
         <div class="widget" id="widget">
             <div class="grid-container">
                 <div class="header">
-                    <span class="name"><strong>Adam Mladý</strong></span>
-                    <br>
-                    <img src="./logo/elevated.png" alt="ELEVATED" class="elevated">
+                    <div class="title">
+                        <div class="name"></div>
+                        <div class="vr"></div>
+                        <div class="alt-name"></div>
+                    </div>
                     <br>
                     <p class="desc">
                         A Programmer, Photograper, Audiophile and a General Nerd
@@ -83,12 +63,8 @@
                     <p class="desc">
                         This is a website showcasing all of my endeavours and many more things.
                     </p>
-                    <p class="desc" style="font-size: 2.4vi; position: relative; left: 25%">
-                        This Website is WIP
-                    </p>
                 </div>
                 <div class="logo-cont">
-                    <img src="./logo/logo.png" class="logo" title="Current Logo">
                 </div>
                 <div class="footer">
                     <p class="desc">
@@ -197,6 +173,7 @@
                         <div class="exit" id="x-mine" onclick="closeWindow(this)"></div>
                     </div>
                 </div>
+                <iframe class="minesite" src="https://mc.elevated.ovh" frameborder="0"></iframe>
             </div>
             <div class="win-wall" id="win-wall">
                 <div class="title-bar" id="title-bar">

@@ -58,27 +58,26 @@ body {
     border-bottom-right-radius: 5px;
     position: absolute;
     z-index: -1;
-}
-
-.clock {
-    color: white;
-    font-family: "RoundedMgenPlus2ppMedium";
-    display: table;
-    margin: 0 auto;
-    width: max-content;
-    font-size: 2vh;
-    cursor: default;
+    & > span.clock {
+        color: white;
+        font-family: "RoundedMgenPlus2ppMedium";
+        display: table;
+        margin: 0 auto;
+        width: max-content;
+        font-size: 2vh;
+        cursor: default;
+    }
 }
 
 .bottom-bar {
-    height: 4.2vh;
+    height: 4.2%;
     background: var(--bgc);
     width: min-content;
     margin-inline: auto;
     left: 0;
     right: 0;
     position: absolute;
-    top: 95.4vh;
+    top: 95.4%;
     color: white;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -107,85 +106,76 @@ body {
             cursor: pointer;
         }
     }
+    & > div.appman-info {
+        background: url("../icons/userinfo.svg") no-repeat;
+        background-size: 1.7vw;
+        left: 0.5vw;
+        right: 0.5vw;
+        display: block;
+        background-position: center;
+    }
+    & > div.appman-git {
+        background: url("../icons/github.svg") no-repeat;
+        background-size: 1.7vw;
+        left: 0.5vw;
+        right: 0.5vw;
+        display: block;
+        background-position: center;
+    }
+    & > div.appman-art {
+        background: url("../icons/gnome-paint.svg") no-repeat;
+        background-size: 1.7vw;
+        left: 0.5vw;
+        right: 0.5vw;
+        display: block;
+        background-position: center;
+    }
+    & > div.appman-vape {
+        background: url("../icons/vaprio.svg") no-repeat;
+        background-size: 1.7vw;
+        left: 0.5vw;
+        right: 0.5vw;
+        display: block;
+        background-position: center;
+    }
+    & > div.appman-music {
+        background: url("../icons/playmymusic.svg") no-repeat;
+        background-size: 1.7vw;
+        left: 0.5vw;
+        right: 0.5vw;
+        display: block;
+        background-position: center;
+    }
+    & > div.appman-mine {
+        background: url("../icons/minecraft.svg") no-repeat;
+        background-size: 1.7vw;
+        left: 0.5vw;
+        right: 0.5vw;
+        display: block;
+        background-position: center;
+    }
+    & > div.appman-wall {
+        background: url("../icons/accessories-image-viewer.svg") no-repeat;
+        background-size: 1.7vw;
+        left: 0.5vw;
+        right: 0.5vw;
+        display: block;
+        background-position: center;
+    }
     & > div:hover {
         background-color: rgba(91, 92, 95, 1);
         border-radius: 10px;
     }
 }
 
-.appman-info {
-    background: url("../icons/userinfo.svg") no-repeat;
-    background-size: 1.7vw;
-    left: 0.5vw;
-    right: 0.5vw;
-    display: block;
-    background-position: center;
-}
-
-.appman-git {
-    background: url("../icons/github.svg") no-repeat;
-    background-size: 1.7vw;
-    left: 0.5vw;
-    right: 0.5vw;
-    display: block;
-    background-position: center;
-}
-
-.appman-art {
-    background: url("../icons/gnome-paint.svg") no-repeat;
-    background-size: 1.7vw;
-    left: 0.5vw;
-    right: 0.5vw;
-    display: block;
-    background-position: center;
-}
-
-.appman-vape {
-    background: url("../icons/vaprio.svg") no-repeat;
-    background-size: 1.7vw;
-    left: 0.5vw;
-    right: 0.5vw;
-    display: block;
-    background-position: center;
-}
-
-
-.appman-music {
-    background: url("../icons/playmymusic.svg") no-repeat;
-    background-size: 1.7vw;
-    left: 0.5vw;
-    right: 0.5vw;
-    display: block;
-    background-position: center;
-}
-
-.appman-mine {
-    background: url("../icons/minecraft.svg") no-repeat;
-    background-size: 1.7vw;
-    left: 0.5vw;
-    right: 0.5vw;
-    display: block;
-    background-position: center;
-}
-
-.appman-wall {
-    background: url("../icons/accessories-image-viewer.svg") no-repeat;
-    background-size: 1.7vw;
-    left: 0.5vw;
-    right: 0.5vw;
-    display: block;
-    background-position: center;
-}
-
-
-.widget {
+div.widget {
     display: inline;
     width: 60vw;
-    height: 75vh;
+    height: 76vh;
     position: absolute;
     margin-inline: auto;
-    padding: 15px;
-    top: 9.5vh;
+    padding: 1%;
+    top: calc((100vh - 80vh) / 2);
     left: 0;
     right: 0;
     color: white;
@@ -193,71 +183,95 @@ body {
     border-radius: 30px;
     border: 2px solid red;
     cursor: default;
-    z-index: -1;
-}
-
-.name {
-    font-family: Helvetica;
-    font-size: 3vi;
-}
-
-.elevated {
-    width: 10vi;
-    padding-left: 0.1vi;
-}
-
-.desc {
-    font-family: Roboto;
-    font-size: 1.2vi;
-}
-
-.grid-container {
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    'header logo'
-    'footer footer';
-    column-gap: 1vw;
-    row-gap: 2vh;
-    & > div {
+    z-index: 10;
+    & > div.grid-container {
+        width: 100%;
         height: 100%;
+        max-height: 100%;
+        display: grid;
+        grid-template-columns: 1fr min-content;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: 
+        'header logo'
+        'footer footer';
+        column-gap: 20px;
+        row-gap: 20px;
+        & > div.header {
+            display: flexbox;
+            background-color: rgba(255, 255, 255, 0.01);
+            height: 25vh;
+            max-height: 25vh;
+            border-radius: 20px;
+            padding-top: 2%;
+            padding-left: 2%;
+            padding-right: 2%;
+            word-wrap: break-word;
+            line-break: anywhere;
+            overflow: hidden;
+            overflow-y: auto;
+            & > div.title {
+                display: grid;
+                grid-template-columns: 1fr min-content min-content;
+                color: white;
+                align-content: center;
+                & > div.name {
+                    background: url("../logo/name.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 80%;
+                    width: calc((55vw - 25vh) / 2);
+                    height: 10vh;
+                }
+                & > div.vr {
+                    width: 0.3vw;
+                    height: 10vh;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    border-radius: 20px;
+                    
+                }
+                & > div.alt-name {
+                    background: url("../logo/elevated.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 80%;
+                    width: calc((55vw - 25vh) / 2);
+                    height: 10vh;
+                }
+            }
+            & > p.desc {
+                font-family: Roboto;
+                font-size: 1.2vw;
+                margin: 1vh;
+                margin-bottom: 2vh;
+            }
+        }
+        & > div.logo-cont {
+            display: inline-block;
+            position: relative;   
+            background: url("../logo/logo.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 25vh;
+            width: 25vh;
+            padding: 2%;
+        }
+        & > div.footer {
+            grid-column: span 2;
+            background-color: rgba(255, 255, 255, 0.01);
+            height: 100%;
+            max-height: 100%;
+            border-radius: 22px;
+            padding-left: 2vh;
+            padding-right: 2vh;
+            word-wrap: break-word;
+            line-break: anywhere;
+            overflow: hidden;
+            overflow-y: auto;
+            font-family: sans-serif;
+            font-size: 1vw;
+        }
     }
-}
-
-.logo-cont {
-    justify-content: center;
-    align-content: center;
-    display: inline-block;
-    position: relative;
-}
-
-.logo {
-    max-width: 85%;
-    max-height: 85%;
-}
-
-.header {
-    background-color: rgba(255, 255, 255, 0.01);
-    border-radius: 20px;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    word-wrap: break-word;
-    max-height: min-content;
-
-}
-
-.footer {
-    grid-column: span 2;
-    background-color: rgba(255, 255, 255, 0.01);
-    border-radius: 22px;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    word-wrap: break-word;
-    max-height: min-content;
 }
 
 .window {
@@ -844,6 +858,7 @@ body {
     display: none;
     position: relative;
     border: 2px solid red;
+    flex-direction: column;
     border-radius: 10px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -937,6 +952,15 @@ body {
             }
         }
     }
+}
+
+.minesite {
+    width: 100%;
+    height: 88vh;
+    display: block;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    z-index: 10;
 }
 
 .win-wall {
