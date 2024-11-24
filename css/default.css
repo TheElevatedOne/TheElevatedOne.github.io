@@ -166,6 +166,10 @@ body {
         background-color: rgba(91, 92, 95, 1);
         border-radius: 10px;
     }
+    & > div:has(> input:checked) {
+        background-color: rgba(91, 92, 95, 1);
+        border-radius: 10px;
+    }
 }
 
 div.widget {
@@ -209,6 +213,7 @@ div.widget {
             line-break: anywhere;
             overflow: hidden;
             overflow-y: auto;
+            font-family: sans-serif;
             & > div.title {
                 display: grid;
                 grid-template-columns: 1fr min-content min-content;
